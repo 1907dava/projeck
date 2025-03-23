@@ -1,0 +1,86 @@
+/* Styling untuk halaman */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('Img/gambar\ 1.jpg') no-repeat center center/cover; /* Gambar latar belakang */
+  color: #fff; /* Warna teks putih agar kontras */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Overlay gelap untuk kontras */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%; /* Maksimal lebar 90% dari layar */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem; /* Ukuran font lebih kecil untuk portrait */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#countdown {
+  display: flex;
+  flex-direction: column; /* Ubah menjadi kolom untuk portrait */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  gap: 15px; /* Jarak antar elemen waktu */
+}
+
+.time {
+  background-color: rgba(255, 255, 255, 0.8); /* Kotak waktu transparan */
+  padding: 15px; /* Padding lebih kecil */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Lebar kotak waktu 100% untuk portrait */
+  min-width: auto; /* Hapus batasan lebar minimum */
+}
+
+.time span {
+  font-size: 1.8rem; /* Ukuran angka lebih kecil */
+  font-weight: bold;
+  color: #e74c3c; /* Warna merah cerah */
+}
+
+.time p {
+  margin: 5px 0 0;
+  font-size: 0.9rem; /* Ukuran label lebih kecil */
+  color: #34495e; /* Warna biru tua */
+}
+
+/* Responsive Design untuk Layar Kecil (Portrait) */
+@media (max-width: 768px) and (orientation: portrait) {
+  body {
+    background: url('Img/gambar\ 1_portrait.jpg') no-repeat center center/cover; /* Gambar khusus portrait */
+    background-size: auto 100vh; /* Sesuaikan tinggi gambar dengan layar */
+    background-position: center; /* Pusatkan gambar */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Ukuran font lebih kecil untuk portrait */
+  }
+
+  #countdown {
+    gap: 10px; /* Jarak antar elemen waktu lebih kecil */
+  }
+
+  .time {
+    padding: 10px; /* Padding lebih kecil */
+  }
+
+  .time span {
+    font-size: 1.5rem; /* Ukuran angka lebih kecil */
+  }
+
+  .time p {
+    font-size: 0.8rem; /* Ukuran label lebih kecil */
+  }
+}
